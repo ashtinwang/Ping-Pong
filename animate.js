@@ -39,13 +39,23 @@ function handleShipAnimation() {
 
 function RenderNewObject(context) {
   // Draw a new item here using the canvas 'context' variable
-    context.strokeRect(NEW_OBJECT.x,NEW_OBJECT.y, 60, 60);
+    context.strokeRect(NEW_OBJECT.x,NEW_OBJECT.y, 050, 050);
 }
 
 function HandleNewObjectMovement() {
-  NEW_OBJECT.x += 1;
-  NEW_OBJECT.y += 1;
+  if (NEW_OBJECT.x > GAME.canvas.width-050) {
+    NEW_OBJECT.w *= -1.1;
+  } else if (NEW_OBJECT.x < 0) {
+    NEW_OBJECT.w *= -1.1;
+  } else if (NEW_OBJECT.y > GAME.canvas.height-050) {
+    NEW_OBJECT.z *= -1.1;
+  } else if (NEW_OBJECT.y < 0) {
+    NEW_OBJECT.z *= -1.1;
+  }
+  NEW_OBJECT.x += (1*NEW_OBJECT.w);
+  NEW_OBJECT.y += (1*NEW_OBJECT.z);
 }
+
 
 function runGame() {
   var canvas = document.getElementById('mainCanvas');
