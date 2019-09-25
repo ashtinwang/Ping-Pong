@@ -2,14 +2,20 @@
  *  Keydown event listener runs every time ANY key is pressed!
  *
  */
+ var CONTROLS = {
+  paddle : {
+    up : false,
+    down : false,
+  }
+};
 
 document.addEventListener('arrows', function(event) {
   switch (event.keydown) {
     case "ArrowUp":
-      PADDLE.y += PADDLE.v; //arrow keys move paddle up and down
+      CONTROLS.paddle.up = true;
       break;
     case "ArrowDown":
-      PADDLE.y -= PADDLE.v;
+      CONTROLS.paddle.down = true;
       break;
     default:
       break;

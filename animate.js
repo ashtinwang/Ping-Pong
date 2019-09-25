@@ -3,6 +3,12 @@ function HandlePaddleAnimation() {
   //takes control of paddle moving
   //makes sure paddle doesnt go out of screen
   //maybe the paddle will accelerate when arrow pressed?
+  if(PADDLE.y >= 0 && CONTROLS.paddle.up == true){
+    PADDLE.y -= PADDLE.v;
+  }
+  else if (PADDLE.y <= GAME.canvas.height, CONTROLS.paddle.down == true){
+    PADDLE.y += PADDLE.v;
+  }
 }
 
 function HandleBallAnimation() {
@@ -21,9 +27,11 @@ function RenderNewObstacle(context) {
 }
 
 function RenderBall(context) {
+  context.ellipse(BALL.x, BALL.y, BALL.width, BALL.height, 0, 0, true);
 }
 
 function RenderPaddle(context) {
+  context.fillRect(PADDLE.x, PADDLE.y, PADDLE.width, PADDLE.height);
 }
 
 function runGame() {

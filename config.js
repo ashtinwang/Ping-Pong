@@ -8,11 +8,11 @@ var GAME = {
 };
 
 var PADDLE = {
-  x: 100, //x coord of paddle
-  y: 100,  //y coord of paddle, changes
+  x: 10, //x coord of paddle
+  y: GAME.canvas.height / 2 - 50,  //y coord of paddle, changes
   v: 5, //speed of paddle when arrow key pressed
-  width: 200, //width of paddle
-  height: 50 //height of paddle
+  width: 10, //width of paddle
+  height: 100 //height of paddle
   //could use an image
 };
 
