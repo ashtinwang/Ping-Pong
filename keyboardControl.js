@@ -3,13 +3,27 @@
  *
  */
 
-document.addEventListener('arrows', function(event) {
-  switch (event.keydown) {
+document.addEventListener('keydown', function(event) {
+  switch (event.key) {
     case "ArrowUp":
-      PADDLE.y += PADDLE.v; //arrow keys move paddle up and down
+      CONTROLS.paddle.up = true;
       break;
     case "ArrowDown":
-      PADDLE.y -= PADDLE.v;
+      CONTROLS.paddle.down = true;
+      break;
+    default:
+      break;
+  }
+});
+
+
+document.addEventListener('keyup', function(event) {
+  switch (event.key) {
+    case "ArrowUp":
+      CONTROLS.paddle.up = false;
+      break;
+    case "ArrowDown":
+      CONTROLS.paddle.down = false;
       break;
     default:
       break;
