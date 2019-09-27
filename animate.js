@@ -3,10 +3,10 @@ function HandlePaddleAnimation() {
   //takes control of paddle moving
   //makes sure paddle doesnt go out of screen
   //maybe the paddle will accelerate when arrow pressed?
-  if(PADDLE.y >= 0 && CONTROLS.paddle.up == true){
+  if(CONTROLS.paddle.up == true){
     PADDLE.y -= PADDLE.v;
   }
-  else if (PADDLE.y <= GAME.canvas.height, CONTROLS.paddle.down == true){
+  else if (CONTROLS.paddle.down == true){
     PADDLE.y += PADDLE.v;
   }
 }

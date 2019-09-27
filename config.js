@@ -7,6 +7,14 @@ var GAME = {
   level : 1
 };
 
+var CONTROLS = {
+ paddle : {
+   up : false,
+   down : false,
+ }
+};
+
+
 var PADDLE = {
   x: 10, //x coord of paddle
   y: GAME.canvas.height / 2 - 50,  //y coord of paddle, changes
