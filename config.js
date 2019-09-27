@@ -25,9 +25,9 @@ var PADDLE = {
 };
 
 var BALL = {
-  radius: 40, //radius of ball
-  y: 0, //y coord of ball, changes
+  radius: 10, //radius of ball
+  y: PADDLE.y + PADDLE.height / 2, //y coord of ball, changes
   v: 0, //vertical speed of BALL
   g: 5, //gravitational acceleration
-  x: PADDLE.x + PADDLE.width/2 //x coord of ball, should be in middle of paddle
+  x: 10 + PADDLE.width + 10//x coord of ball, should be in middle of paddle
 }
